@@ -10,8 +10,10 @@ class Topic(models.Model):
         """Return a string representation of the model."""
         return self.text
 
+
 class Entry(models.Model):
     """Something specific learned about a topic."""
+    
     topic = models.ForeignKey(Topic,
                               on_delete=models.CASCADE)
     text = models.TextField()

@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Log - An Online Journal</title>
     <!-- <link rel="stylesheet" href="css/styles.css" -->
-    <!--
-    <style>h1 { color: #2E8B57; }</style>
-    <style>p { color: #8b2e62; }</style>
-    <style> .center { text-align: center; border: 3px solid green; }</style> THIS LINE DOESN'T WORK, CHANGE AFTER LEARNING MORE ABOUT CSS -->
     </head>
     
     <body>
     {% extends "learning_logs/base.html" %}
     
     {% block content %}
-    
-        <p>Learning Log helps you keep track of your learning, for any topic you're learning about.</p>
-    
+        
+        <h2>Topics</h2>
+        
+        <ul>
+        {% for topic in topics %}
+            <li>{{ topic }}</li>
+        {% empty %}
+            <li>No topics have been added yet.</li>
+        {% endfor %}
+        </ul>
+                
     {% endblock content %}
     </body>
 </html>
