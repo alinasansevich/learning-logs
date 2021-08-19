@@ -20,7 +20,12 @@ app_name = "learning_logs" # I added this line!
 urlpatterns = [
     # Home page
     path('', views.index, name='index'),
+    # Show all topics
     path('topics/', views.topics, name='topics'),
+    # Detail page for a single topic
+    path('<int:topic_id>/', views.topic, name='topic'),
+    # Page for adding a new topic
+    path('new_topic/', views.new_topic, name='new_topic')
     ]
 # when the requested URL string matches the first argument,
 # path calls the function it received in the second argument,

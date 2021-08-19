@@ -14,7 +14,12 @@
     
     {% block content %}
     
-        <p>Learning Log helps you keep track of your learning, for any topic you're learning about.</p>
+      <h5>Add a new topic:</h5>
+        <form action="{% url 'learning_logs:new_topic' %}" method='post'>
+          {% csrf_token %} <!-- this line prevents 'cross-site request forgery' attacks -->
+          {{ form.as_p }} <!-- 'as_p' modifier: all form elements will be rendered in paragraph format  -->
+          <button name="submit">add topic</button>
+        </form>
     
     {% endblock content %}
     </body>

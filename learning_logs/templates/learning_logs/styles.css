@@ -1,0 +1,22 @@
+* {
+  background: #FCEFF9;
+}
+
+h1 {
+  color: #F7C7DB;
+}
+ /* unvisited link */
+a:link {
+  color: #88D18A;
+}
+/* visited link */
+a:visited {
+  color: #f08a80;
+}
+/* mouse over link */
+a:hover {
+  color: #DB3A34;
+}
+.header {
+  background:  #04395E;
+}
