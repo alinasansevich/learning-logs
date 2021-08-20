@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'learning_logs/styles.css' %}"/>
+
+
 <html lang="eng-us">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Log - An Online Journal</title>
-    <link rel="stylesheet" type="text/css" href="learning_logs/styles.css">
+    
     </head>
     <body>
         <h1 class="header">Learning Log</h1>
@@ -16,7 +19,3 @@
         {% block content %}{% endblock content %}
     </body>
 </html>
-
-<!-- 
-https://stackoverflow.com/questions/60361617/reverse-for-new-entry-with-arguments-not-found-1-patterns-tried
--->

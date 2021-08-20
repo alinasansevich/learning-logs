@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Log - An Online Journal</title>
+    <!--
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    -->
+    </head>
+    
+    <body>
+    {% extends "learning_logs/base.html" %}
+    
+    {% block content %}
+    
+      <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+          
+      <h5>Add a new entry:</h5>
+        <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
+          {% csrf_token %} <!-- this line prevents 'cross-site request forgery' attacks -->
+          {{ form.as_p }} <!-- 'as_p' modifier: all form elements will be rendered in paragraph format  -->
+          <button name="submit">add entry</button>
+        </form>
+    
+    {% endblock content %}
+    </body>
+</html>

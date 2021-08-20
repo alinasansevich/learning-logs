@@ -11,6 +11,9 @@ from django.urls import path
 # from django.conf.urls import url --> this is from older Django versions
 from . import views   # the dot tells Python to import views from the same directory as the current urls.py module.
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 # https://stackoverflow.com/questions/41883254/django-is-not-a-registered-namespace
 app_name = "learning_logs" # I added this line!
 
@@ -28,7 +31,10 @@ urlpatterns = [
     path('new_topic/', views.new_topic, name='new_topic'),
     # Page for adding a new entry
     path('new_entry/<int:topic_id>/', views.new_entry, name='new_entry'),
-    ]
+    # Page for editing an entry
+    path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
+    # Add static files
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # when the requested URL string matches the first argument,
 # path calls the function it received in the second argument,
 # and the third argument provides a name for this URL pattern,
