@@ -123,8 +123,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'/static/'),
+    '/home/alina/Learning_to_Code/WebDev/LearningLog/learning_logs/templates/learning_logs/static/style.css',
 ]
+
+# https://www.py4u.net/discuss/13788
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,'/static'),
+# ]
+
+# STATICFILES_DIRS like this : STATICFILES_DIR=("C:/Users/Raphael/Desktop/mysite/static",)
+
+# learning_logs/static/learning_logs/css/style.css
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'polls/static')]
 
 # STATIC_ROOT = os.path.join(BASE_DIR,  'static') --> this is for production!
 #---------------

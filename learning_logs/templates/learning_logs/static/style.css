@@ -1,0 +1,30 @@
+/*
+Color Palette from # 04 --> https://visme.co/blog/website-color-schemes/
+
+#05386B - dark blue
+
+#379683 - dry green
+
+#5CDB95 - bright green --> background
+
+#8EE4AF - light green
+
+#EDF5E1 - almost white
+
+-------------------------------------------
+
+*/
+
+/* Global styles ---------------------------------*/
+
+body {
+  background {
+    color: #5CDB95;
+  }
+}
+
+.header {
+  color: green;
+}
+
+/*------------------------------------------------*/
