@@ -17,11 +17,10 @@ Color Palette from # 04 --> https://visme.co/blog/website-color-schemes/
 
 /* Global styles ---------------------------------*/
 
-body {
-  background {
-    color: #5CDB95;
-    
-  }
+html {
+  color: #05386B;
+  background-color: #5CDB95;
 }
+
 
 /*------------------------------------------------*/
